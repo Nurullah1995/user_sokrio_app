@@ -18,7 +18,7 @@ class UserDetailScreen extends StatelessWidget {
           children: [
             CircleAvatar(radius: 56, backgroundImage: CachedNetworkImageProvider(user.avatar)),
             const SizedBox(height: 16),
-            Text('${user.firstName} ${user.lastName}', style: Theme.of(context).textTheme.headlineSmall),
+            Text('${user.firstName} ${user.lastName}', style: TextStyle(fontSize: 18)),
             const SizedBox(height: 8),
             Row(children: [const Icon(Icons.email), const SizedBox(width: 8), Text(user.email)]),
             const SizedBox(height: 8),

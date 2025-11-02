@@ -14,10 +14,13 @@ class UserRemoteDataSourceImpl implements UserRemoteDataSource {
 
   @override
   Future<List<UserModel>> getUsers(int page, int perPage) async {
-    final response = await apiService.getRequest('${AppUrls.baseUrl}/users', params: {
-      'page': page,
-      'per_page': perPage,
-    });
+    // final params = {
+    //   'page': page,
+    //   'per_page': perPage,
+    // };
+    final response = await apiService.getRequest('${AppUrls.baseUrl}/users',
+    //  params: params,
+    );
     final data = (response.data['data'] as List)
         .map((json) => UserModel.fromJson(json))
         .toList();
